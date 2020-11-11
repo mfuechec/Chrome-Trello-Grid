@@ -44,9 +44,11 @@ function makeColumns() {
         }
         div.style.display = 'flex';
         div.style.flexDirection = 'column';
+        div.className = 'grid-div';
         board.appendChild(div);
     }
     board.appendChild(board.children[0]);
+    styleAddAnother();
     board.classList.add('grid')
 }
 
@@ -78,8 +80,9 @@ function enableScrolling() {
 
 function styleAddAnother() {
     let element = document.getElementsByClassName('js-add-list');
-    element[0].style.height = '5vh';
+    element[0].style.minHeight = '';
     element[0].style.overflow = 'hidden';
+    element[0].style.height = '8vh';
 }
 
 function removeColumns() {
@@ -96,6 +99,8 @@ function removeColumns() {
     }
     board.style.display = '';
     board.classList.remove('grid');
+    let element = document.getElementsByClassName('js-add-list');
+    element[0].style.height = 'auto';
 }
 
 function isNormal(list) {
