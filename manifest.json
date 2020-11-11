@@ -1,0 +1,13 @@
+{
+    "manifest_version": 2,
+   
+    "name": "Trello Grid",
+    "version": "0.1.0",
+    "description": "Adds grid layout to Trello",
+   
+    "content_scripts": [{
+      "js": ["content.js"],
+      "matches": ["https://trello.com/*"]
+    }]
+   
+  }
