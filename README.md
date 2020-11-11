@@ -1,0 +1,1 @@
+This is the code for a Chrome extension that maps the 'g' key to a function that converts Trello to a grid layout.
