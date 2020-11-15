@@ -1,8 +1,20 @@
-addEventListener('keypress', function(event) {
+addEventListener('keypress', handleG)
+addEventListener('focusin', handleFocusIn);
+addEventListener('focusout', handleFocusOut);
+
+function handleG(event) {
     if (event.key === 'g') {
         toggleGrid();
     }
-})
+}
+
+function handleFocusIn() {
+    removeEventListener('keypress', handleG);
+}
+
+function handleFocusOut() {
+    addEventListener('keypress', handleG);
+}
 
 function toggleGrid() {
     let board = document.getElementById('board');
